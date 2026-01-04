@@ -1,0 +1,24 @@
+{
+  "name": "startup_planet",
+  "version": "1.0.0",
+  "description": "a dataset of the world’s most promising startups",
+  "homepage": "https://github.com/HudsonK86/Learning_Express_Scrimba#readme",
+  "bugs": {
+    "url": "https://github.com/HudsonK86/Learning_Express_Scrimba/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HudsonK86/Learning_Express_Scrimba.git"
+  },
+  "license": "ISC",
+  "author": "Khoa",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

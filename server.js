@@ -1,35 +1,16 @@
 import express from "express"
-import { startups } from "./data/data.js"
+import { apiRouter } from "./routes/apiRoutes.js"
+import cors from "cors"
 
 const PORT = 8000
 const app = express()
 
-app.get("/api", (req, res) => {
-    let filteredStartups = startups
+app.use(cors())
 
-    const { country, industry, continent, is_seeking_funding, has_mvp } = req.query
+app.use("/api", apiRouter)
 
-    if (country) {
-        filteredStartups = filteredStartups.filter(startup => startup.country.toLowerCase() === country.toLowerCase())
-    }
-
-    if (industry) {
-        filteredStartups = filteredStartups.filter(startup => startup.industry.toLowerCase() === industry.toLowerCase())
-    }
-    
-    if (continent) {
-        filteredStartups = filteredStartups.filter(startup => startup.continent.toLowerCase() === continent.toLowerCase())
-    }
-    
-    if (is_seeking_funding) {
-        filteredStartups = filteredStartups.filter(startup => startup.is_seeking_funding === JSON.parse(is_seeking_funding.toLowerCase()))
-    }
-
-    if (has_mvp) {
-        filteredStartups = filteredStartups.filter(startup => startup.has_mvp === JSON.parse(has_mvp.toLowerCase()))
-    }
-    
-    res.json(filteredStartups)
+app.use((req, res) => {
+    res.status(404).json({ message: "Route not found" })
 })
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))

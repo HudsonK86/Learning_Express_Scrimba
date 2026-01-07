@@ -8,7 +8,9 @@ export const getDataByPathParams = (req, res) => {
         return res.status(400).json({ message: "Invalid field" })
     }
 
-    const filteredStartups = startups.filter(startup => startup[field].toLowerCase() === term.toLowerCase())
+    const filteredStartups = startups.filter(
+        (startup) => startup[field].toLowerCase() === term.toLowerCase()
+    )
 
     res.json(filteredStartups)
 }

@@ -1,25 +1,33 @@
 {
-  "name": "startup_planet",
-  "version": "1.0.0",
-  "description": "a dataset of the world’s most promising startups",
-  "homepage": "https://github.com/HudsonK86/Learning_Express_Scrimba#readme",
-  "bugs": {
-    "url": "https://github.com/HudsonK86/Learning_Express_Scrimba/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HudsonK86/Learning_Express_Scrimba.git"
-  },
-  "license": "ISC",
-  "author": "Khoa",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.2.1"
-  }
+    "name": "startup_planet",
+    "version": "1.0.0",
+    "description": "a dataset of the world’s most promising startups",
+    "homepage": "https://github.com/HudsonK86/Learning_Express_Scrimba#readme",
+    "bugs": {
+        "url": "https://github.com/HudsonK86/Learning_Express_Scrimba/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HudsonK86/Learning_Express_Scrimba.git"
+    },
+    "license": "ISC",
+    "author": "Khoa",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "prettier": "^3.7.4"
+    }
 }

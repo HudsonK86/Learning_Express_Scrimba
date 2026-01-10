@@ -1,8 +1,11 @@
 import express from "express"
 import { apiRouter } from "./routes/apiRoutes.js"
 import cors from "cors"
+import dotenv from "dotenv"
 
-const PORT = 8000
+dotenv.config()
+
+const PORT = process.env.PORT || 8000
 const app = express()
 
 app.use(cors())
